@@ -1,0 +1,280 @@
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: #030304;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  z-index: 0;
+  max-width: 100%;
+}
+
+.hero-container {
+  z-index: 999999;
+  height: 100vh;
+  position: relative;
+  background: url(https://www.pac.fit/wp-content/uploads/2015/09/fitness-body-hd-wallpapers-of-high-quality.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.hero-container .menu {
+  left: -100px;
+  -webkit-animation: leftToRight 1.2s forwards 0.5s linear;
+          animation: leftToRight 1.2s forwards 0.5s linear;
+  position: absolute;
+  top: 35%;
+  height: auto;
+}
+
+.hero-container .menu ul {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.hero-container .menu ul li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.hero-container .menu ul li a {
+  text-decoration: none;
+}
+
+.hero-container .menu ul li a img {
+  width: 40px;
+  height: 40px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.hero-container .menu ul li a span {
+  display: none;
+}
+
+.hero-container .menu ul li:hover a span {
+  display: inline;
+  color: white;
+}
+
+.hero-container .img-container {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.541);
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-container .img-container img {
+  width: 60%;
+}
+
+.hero-container .text-container {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-container .text-container * > {
+  color: white;
+}
+
+.hero-container .text-container h1 {
+  color: white;
+}
+
+.hero-container .text-container h3 {
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.hero-container .text-container h3 span {
+  color: #fad925;
+}
+
+.hero-container .text-container p {
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.hero-container .text-container img {
+  width: 20%;
+}
+
+section {
+  padding: 40px;
+  margin-top: 40px;
+  background: #030304;
+}
+
+section h3 {
+  color: #fad925;
+}
+
+section p {
+  color: white;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+.set-relative {
+  position: relative !important;
+}
+
+.section-v-center {
+  position: absolute !important;
+  top: 25% !important;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.color-lion {
+  color: #fad925 !important;
+}
+
+.services {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.service {
+  text-align: center;
+}
+
+.service .service-info {
+  background: #333439;
+  padding: 20px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.service img {
+  width: 70%;
+  max-height: 345px;
+  min-height: 345px;
+}
+
+.end {
+  width: 50% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  margin-bottom: 30px;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.row-custom {
+  margin-top: 20px;
+}
+
+.coach {
+  max-height: 650px;
+  overflow: hidden;
+}
+
+.coach h3 {
+  color: white;
+}
+
+.coach .social {
+  text-align: center;
+  display: none;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  z-index: 0;
+  top: 45%;
+  left: 0%;
+  padding: 20px;
+}
+
+.coach .social p {
+  color: white;
+  text-align: justify !important;
+}
+
+.coach .social img {
+  width: 25%;
+}
+
+.coach:hover .social {
+  width: 85%;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: #3334396b;
+  display: block;
+}
+
+.separator {
+  height: 1px;
+  background-color: #fad925 !important;
+}
+
+.btn-lion {
+  background-color: transparent;
+  border: 1px solid #fad925;
+  color: white;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes leftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

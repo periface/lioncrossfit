@@ -1,0 +1,263 @@
+﻿// * {
+//   font-family: 'Anton', sans-serif;
+// }
+* {
+  font-family: 'Oswald', sans-serif;
+}
+body {
+  background-color: #030304;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  z-index: 0;
+  max-width: 100%;
+}
+
+.hero-container {
+  z-index: 999999;
+  height: 100vh;
+  position: relative;
+  background: url(https://www.pac.fit/wp-content/uploads/2015/09/fitness-body-hd-wallpapers-of-high-quality.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  .menu {
+    left: -100px;
+    animation: leftToRight 1.2s forwards 0.5s linear;
+    position: absolute;
+    top: 35%;
+    height: auto;
+
+    ul {
+      padding-left: 15px;
+      padding-top: 10px;
+      padding-right: 20px;
+
+      li {
+        margin-bottom: 10px;
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+
+          img {
+            width: 40px;
+            height: 40px;
+            transform: rotateY(180deg);
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      li:hover {
+        a {
+          span {
+            display: inline;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .img-container {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.541);
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      width: 60%;
+    }
+  }
+
+  .text-container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    * > {
+      color: white;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    h3 {
+      margin-top: 30px;
+
+      color: white;
+      text-align: center;
+      letter-spacing: 5px;
+
+      span {
+        color: #fad925;
+      }
+    }
+
+    p {
+      color: white;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    img {
+      width: 20%;
+    }
+  }
+}
+
+section {
+  padding: 40px;
+  margin-top: 40px;
+  background: #030304;
+
+  h3 {
+    color: #fad925;
+  }
+
+  p {
+    color: white;
+    letter-spacing: 2px;
+    text-align: justify;
+  }
+}
+
+.set-relative {
+  position: relative !important;
+}
+
+.section-v-center {
+  position: absolute !important;
+  top: 25% !important;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.color-lion {
+  color: #fad925 !important;
+}
+
+.spacing {
+  //   letter-spacing: 2px;
+}
+
+.services {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.service {
+  text-align: center;
+
+  .service-info {
+    background: #333439;
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 70%;
+    max-height: 345px;
+    min-height: 345px;
+  }
+}
+
+.end {
+  width: 50% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  margin-bottom: 30px;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.row-custom {
+  margin-top: 20px;
+}
+
+.coach {
+  max-height: 650px;
+  overflow: hidden;
+  h3 {
+    color: white;
+  }
+  .social {
+    text-align: center;
+    display: none;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    z-index: 0;
+    top: 45%;
+    left: 0%;
+    padding: 20px;
+    p {
+      color: white;
+      text-align: justify !important;
+    }
+    img {
+      width: 25%;
+    }
+  }
+}
+.coach:hover {
+  .social {
+    width: 85%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background: #3334396b;
+    display: block;
+  }
+}
+.separator {
+  height: 1px;
+  background-color: #fad925 !important;
+}
+.btn-lion {
+  background-color: transparent;
+  border: 1px solid #fad925;
+  color: white;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -100px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
