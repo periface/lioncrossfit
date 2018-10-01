@@ -97,6 +97,12 @@ function startSpy() {
     activatedElement = '#pichonModal';
     $('#pichonModal').addClass('show-modal');
   });
+
+  $('#marco').click(() => {
+    activatedElement = '#marcoModal';
+    $('#marcoModal').addClass('show-modal');
+  });
+
   $('.btn-close').click(() => {
     console.log(activatedElement);
     $(activatedElement).removeClass('show-modal');

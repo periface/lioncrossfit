@@ -176,6 +176,9 @@ canvas {
     color: white;
   }
 }
+.grayscale {
+  filter: grayscale(15);
+}
 /*SERVICES SECTION*/
 .services {
   width: 75%;
@@ -237,20 +240,38 @@ canvas {
   top: 0;
   background: black;
   z-index: 9999999;
-  .close {
+  .close-elm {
     display: none;
     position: absolute;
     left: 40px;
     top: 20px;
+    z-index: 9999;
   }
   .bios {
+    height: 100%;
     display: none;
+    .bios-bg {
+      position: relative;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: initial;
+    }
+    .bios-info {
+      position: absolute;
+      top: 20%;
+      left: 12%;
+      padding: 40px;
+      background: #00000047;
+      width: 75%;
+    }
   }
   .image {
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    filter: grayscale(15);
     display: none;
     transition: right 2s 3s;
     video {
@@ -265,7 +286,7 @@ canvas {
 
 .show-modal {
   height: 100%;
-  .close {
+  .close-elm {
     display: block;
   }
   .bios {
@@ -273,7 +294,6 @@ canvas {
     position: absolute;
     top: 50%;
     /* height: 100vh; */
-    padding: 40px;
     font-size: 1.5em;
     display: block;
     transform: translate(0, -50%);
@@ -307,7 +327,10 @@ canvas {
   background: url(https://scontent-lax3-2.cdninstagram.com/vp/a33bc063cb1019a17a718f66cecebe57/5C49C80D/t51.2885-15/e35/39331406_245671932757452_3059184894316904448_n.jpg);
 }
 .anita {
-  background: url(https://scontent-lax3-2.cdninstagram.com/vp/e1fa39fe84e753eab44b745f748cfe89/5C24F4B4/t51.2885-15/e35/39089509_166187654278293_6199127671750716486_n.jpg);
+  background: url(https://instagram.fntr3-1.fna.fbcdn.net/vp/5df88fb9594a607fcc171f2a1389797f/5C554F84/t51.2885-15/e35/39871814_152270739027053_3247111639085942792_n.jpg);
+}
+.marco {
+  background: url(https://scontent-lax3-2.cdninstagram.com/vp/c2636c1c99a673f2c4c8f3720568f9ca/5C61CB3E/t51.2885-15/e35/39990135_162845354580881_2765436335593357312_n.jpg);
 }
 /*END SECTION*/
 .end {
