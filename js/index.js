@@ -5,6 +5,8 @@
 smoothScroll();
 //startSlider();
 startSpy();
+
+//https://codepen.io/teolitto/pen/KwOVvL
 function init() {
   clock = new THREE.Clock();
 
@@ -91,24 +93,43 @@ var activatedElement;
 function startSpy() {
   $('#anita').click(() => {
     activatedElement = '#anitaModal';
+    startVideo($(activatedElement));
     $('#anitaModal').addClass('show-modal');
   });
   $('#pichon').click(() => {
     activatedElement = '#pichonModal';
+    startVideo($(activatedElement));
     $('#pichonModal').addClass('show-modal');
   });
 
   $('#marco').click(() => {
     activatedElement = '#marcoModal';
+    startVideo($(activatedElement));
     $('#marcoModal').addClass('show-modal');
   });
-
+  $('#victor').click(() => {
+    activatedElement = '#victorModal';
+    startVideo($(activatedElement));
+    $('#victorModal').addClass('show-modal');
+  });
   $('.btn-close').click(() => {
-    console.log(activatedElement);
     $(activatedElement).removeClass('show-modal');
+    endVideos();
   });
 }
-
+//Inicia el video cuando se carga el modal
+function startVideo($elm) {
+  setTimeout(() => {
+    var elm = $elm.find('video')[0];
+    elm.play();
+  }, 500);
+}
+//Reinicia los videos
+function endVideos() {
+  $('video').each((i, elm) => {
+    elm.load();
+  });
+}
 function startSlider() {
   var bgs = ['/images/bg/bg1.jpg', '/images/bg/bg2.jpg', '/images/bg/bg3.jpg'];
   setInterval(() => {
@@ -117,3 +138,25 @@ function startSlider() {
     element.css('background-image', 'url(' + image + ')');
   }, 5000);
 }
+
+/**
+ *
+ */
+const times = [];
+let fps;
+
+function refreshLoop() {
+  window.requestAnimationFrame(() => {
+    const now = performance.now();
+    while (times.length > 0 && times[0] <= now - 1000) {
+      times.shift();
+    }
+    times.push(now);
+    fps = times.length;
+    if (fps <= 40) {
+    }
+    refreshLoop();
+  });
+}
+
+refreshLoop();

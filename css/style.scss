@@ -179,6 +179,9 @@ canvas {
 .grayscale {
   filter: grayscale(15);
 }
+.blur {
+  filter: blur(3px);
+}
 /*SERVICES SECTION*/
 .services {
   width: 75%;
@@ -222,14 +225,20 @@ canvas {
       color: white;
       text-align: justify !important;
     }
-    img {
-      width: 25%;
-    }
   }
   img {
+    transform: scale(1);
     cursor: pointer;
+    transition: 0.3s ease-in-out;
   }
 }
+
+.coach:hover {
+  img {
+    transform: scale(1.3);
+  }
+}
+
 /*MODAL SECTION*/
 .coach-details {
   width: 100%;
@@ -269,7 +278,7 @@ canvas {
     }
   }
   .image {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     text-align: center;
     display: none;
@@ -278,6 +287,16 @@ canvas {
       width: 100%;
       height: 100%;
       padding: 25px;
+      background: url(https://wallpapercave.com/wp/wp1854228.jpg);
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: white;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
     }
     position: relative;
     right: -100%;
@@ -290,7 +309,7 @@ canvas {
     display: block;
   }
   .bios {
-    width: 50%;
+    width: 60%;
     position: absolute;
     top: 50%;
     /* height: 100vh; */
@@ -316,11 +335,6 @@ canvas {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     right: 0;
-    // img {
-    //   animation: rightToLeft;
-    //   animation-duration: 1s;
-    //   animation-fill-mode: forwards;
-    // }
   }
 }
 .pichon {
@@ -331,6 +345,9 @@ canvas {
 }
 .marco {
   background: url(https://scontent-lax3-2.cdninstagram.com/vp/c2636c1c99a673f2c4c8f3720568f9ca/5C61CB3E/t51.2885-15/e35/39990135_162845354580881_2765436335593357312_n.jpg);
+}
+.victor {
+  background: url(https://scontent-lax3-2.cdninstagram.com/vp/85d6ba25f40f96b6da0e615acdddbdec/5C43965F/t51.2885-15/e35/39726195_322870081609406_3825807239206141952_n.jpg);
 }
 /*END SECTION*/
 .end {
