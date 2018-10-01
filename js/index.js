@@ -85,3 +85,8 @@ function render() {
 function smoothScroll() {
   var scroll = new SmoothScroll('a[href*="#"]');
 }
+
+
+function startSpy(){
+  
+}

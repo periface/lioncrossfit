@@ -18,7 +18,7 @@ canvas {
   z-index: 999999;
   height: 100vh;
   position: relative;
-  background: url(https://www.pac.fit/wp-content/uploads/2015/09/fitness-body-hd-wallpapers-of-high-quality.jpg);
+  background: url(https://www.mensjournal.com/wp-content/uploads/mf/muscular_ripped_dude_torso_main_0.jpg?w=1200&h=1200&crop=1);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -65,6 +65,10 @@ canvas {
   color: white;
 }
 
+.hero-container .grande {
+  font-size: 1.5em;
+}
+
 .hero-container .img-container {
   position: absolute;
   top: 50%;
@@ -79,6 +83,24 @@ canvas {
 
 .hero-container .img-container img {
   width: 60%;
+}
+
+.hero-container .alternative {
+  color: #fad925;
+  margin-right: 10px;
+  border-radius: 0 !important;
+  font-family: 'Anton', sans-serif;
+  margin-top: 10px;
+  letter-spacing: 5px;
+}
+
+.hero-container .teamtxt {
+  letter-spacing: 5px;
+}
+
+.hero-container .anton {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2em;
 }
 
 .hero-container .text-container {
@@ -110,6 +132,7 @@ canvas {
 }
 
 .hero-container .text-container p {
+  margin-top: 20px;
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -180,6 +203,7 @@ section p {
   margin: 0 auto !important;
   text-align: center !important;
   margin-bottom: 30px;
+  font-size: 1.2em;
 }
 
 .color-white {
@@ -275,6 +299,28 @@ section p {
   }
   100% {
     left: 0px;
+  }
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 /*# sourceMappingURL=style.css.map */
