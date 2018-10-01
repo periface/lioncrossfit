@@ -1,3 +1,4 @@
+/*GENERAL ELEMENTS*/
 * {
   font-family: 'Oswald', sans-serif;
 }
@@ -14,11 +15,12 @@ canvas {
   max-width: 100%;
 }
 
+/*HEADER*/
 .hero-container {
   z-index: 999999;
   height: 100vh;
   position: relative;
-  background: url(https://www.mensjournal.com/wp-content/uploads/mf/muscular_ripped_dude_torso_main_0.jpg?w=1200&h=1200&crop=1);
+  background: url("/images/bg/bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -65,10 +67,6 @@ canvas {
   color: white;
 }
 
-.hero-container .grande {
-  font-size: 1.5em;
-}
-
 .hero-container .img-container {
   position: absolute;
   top: 50%;
@@ -96,11 +94,6 @@ canvas {
 
 .hero-container .teamtxt {
   letter-spacing: 5px;
-}
-
-.hero-container .anton {
-  font-family: 'Anton', sans-serif;
-  font-size: 1.2em;
 }
 
 .hero-container .text-container {
@@ -142,39 +135,65 @@ canvas {
   width: 20%;
 }
 
-section {
-  padding: 40px;
-  margin-top: 40px;
-  background: #030304;
+/*helpers */
+.grande {
+  font-size: 1.5em;
 }
 
-section h3 {
-  color: #fad925;
-}
-
-section p {
-  color: white;
-  letter-spacing: 2px;
-  text-align: justify;
+.anton {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2em;
 }
 
 .set-relative {
   position: relative !important;
 }
 
-.section-v-center {
-  position: absolute !important;
-  top: 25% !important;
+.color-lion {
+  color: #fad925 !important;
 }
 
 .img-responsive {
   width: 100%;
 }
 
-.color-lion {
-  color: #fad925 !important;
+.spacing {
+  letter-spacing: 2px;
 }
 
+.color-white {
+  color: white !important;
+}
+
+.separator {
+  height: 1px;
+  background-color: #fad925 !important;
+}
+
+.btn-lion {
+  background-color: transparent;
+  border: 1px solid #fad925;
+  color: white;
+}
+
+.row-custom {
+  margin-top: 20px;
+}
+
+.instagram-btn {
+  border: 1px solid #bd2c8e;
+}
+
+.instagram-btn img {
+  width: 32px;
+}
+
+.instagram-btn span {
+  padding-left: 10px;
+  color: white;
+}
+
+/*SERVICES SECTION*/
 .services {
   width: 75%;
   margin: 0 auto;
@@ -198,22 +217,7 @@ section p {
   min-height: 345px;
 }
 
-.end {
-  width: 50% !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-  margin-bottom: 30px;
-  font-size: 1.2em;
-}
-
-.color-white {
-  color: white !important;
-}
-
-.row-custom {
-  margin-top: 20px;
-}
-
+/*COACHES SECTION*/
 .coach {
   max-height: 650px;
   overflow: hidden;
@@ -233,6 +237,7 @@ section p {
   top: 45%;
   left: 0%;
   padding: 20px;
+  cursor: pointer;
 }
 
 .coach .social p {
@@ -244,28 +249,115 @@ section p {
   width: 25%;
 }
 
-.coach:hover .social {
-  width: 85%;
-  overflow: hidden;
+.coach img {
+  cursor: pointer;
+}
+
+/*MODAL SECTION*/
+.coach-details {
+  width: 100%;
+  position: fixed;
+  height: 0;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+  top: 0;
+  background: black;
+  z-index: 9999999;
+}
+
+.coach-details .close {
+  display: none;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  background: #3334396b;
+  left: 40px;
+  top: 20px;
+}
+
+.coach-details .bios {
+  display: none;
+}
+
+.coach-details .image {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-filter: grayscale(15);
+          filter: grayscale(15);
+  display: none;
+  -webkit-transition: right 2s 3s;
+  transition: right 2s 3s;
+  position: relative;
+  right: -100%;
+}
+
+.coach-details .image video {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+
+.show-modal {
+  height: 100%;
+}
+
+.show-modal .close {
   display: block;
 }
 
-.separator {
-  height: 1px;
-  background-color: #fad925 !important;
+.show-modal .bios {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  /* height: 100vh; */
+  padding: 40px;
+  font-size: 1.5em;
+  display: block;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
-.btn-lion {
-  background-color: transparent;
-  border: 1px solid #fad925;
+.show-modal .bios h2 {
   color: white;
+  border-bottom: 1px solid #fad925;
 }
 
+.show-modal .bios p {
+  color: white;
+  text-align: justify;
+}
+
+.show-modal .image {
+  display: block;
+  float: right;
+  overflow: hidden;
+  height: 100vh;
+  background-size: cover;
+  -webkit-animation: rightToLeft;
+          animation: rightToLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  right: 0;
+}
+
+.pichon {
+  background: url(https://scontent-lax3-2.cdninstagram.com/vp/a33bc063cb1019a17a718f66cecebe57/5C49C80D/t51.2885-15/e35/39331406_245671932757452_3059184894316904448_n.jpg);
+}
+
+.anita {
+  background: url(https://scontent-lax3-2.cdninstagram.com/vp/e1fa39fe84e753eab44b745f748cfe89/5C24F4B4/t51.2885-15/e35/39089509_166187654278293_6199127671750716486_n.jpg);
+}
+
+/*END SECTION*/
+.end {
+  width: 50% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+/*ANIMATIONS*/
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -274,7 +366,6 @@ section p {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -299,6 +390,24 @@ section p {
   }
   100% {
     left: 0px;
+  }
+}
+
+@-webkit-keyframes rightToLeft {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
   }
 }
 

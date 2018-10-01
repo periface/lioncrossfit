@@ -3,6 +3,8 @@
 // init();
 // animate();
 smoothScroll();
+//startSlider();
+startSpy();
 function init() {
   clock = new THREE.Clock();
 
@@ -85,8 +87,27 @@ function render() {
 function smoothScroll() {
   var scroll = new SmoothScroll('a[href*="#"]');
 }
+var activatedElement;
+function startSpy() {
+  $('#anita').click(() => {
+    activatedElement = '#anitaModal';
+    $('#anitaModal').addClass('show-modal');
+  });
+  $('#pichon').click(() => {
+    activatedElement = '#pichonModal';
+    $('#pichonModal').addClass('show-modal');
+  });
+  $('.btn-close').click(() => {
+    console.log(activatedElement);
+    $(activatedElement).removeClass('show-modal');
+  });
+}
 
-
-function startSpy(){
-  
+function startSlider() {
+  var bgs = ['/images/bg/bg1.jpg', '/images/bg/bg2.jpg', '/images/bg/bg3.jpg'];
+  setInterval(() => {
+    var image = bgs[Math.floor(Math.random() * bgs.length)];
+    var element = $('.hero-container');
+    element.css('background-image', 'url(' + image + ')');
+  }, 5000);
 }
